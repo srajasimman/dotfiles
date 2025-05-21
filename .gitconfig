@@ -1,0 +1,30 @@
+[core]
+	excludesfile = /Users/srajasimman/.gitignore
+
+[user]
+	name = Rajasimman S
+	email = srajasimman@gmail.com
+
+[color]
+	ui = auto
+
+[github]
+	user = srajasimman
+
+[init]
+	defaultBranch = main
+
+[push]
+	autoSetupRemote = true
+	default = upstream
+
+[help]
+	autocorrect = 1
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
