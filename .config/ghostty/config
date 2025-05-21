@@ -1,0 +1,4 @@
+command=/opt/homebrew/bin/tmux
+theme = Dracula
+maximize = true
+font-family = "JetBrainsMono Nerd Font Mono"
