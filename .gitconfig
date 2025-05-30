@@ -1,5 +1,6 @@
 [core]
 	excludesfile = /Users/srajasimman/.gitignore
+	excludesfile = ${HOME}/.gitignore
 
 [user]
 	name = Rajasimman S
@@ -23,8 +24,8 @@
 
 [credential "https://github.com"]
 	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper = !${HOMEBREW_PREFIX}/bin/gh auth git-credential
 
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper = !${$HOMEBREW_PREFIX}/bin/gh auth git-credential
