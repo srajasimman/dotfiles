@@ -1,0 +1,121 @@
+#!/usr/bin/env bash
+
+# Set XDG directories.
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+
+# Variables for dotfiles repo.
+git_host="github.com"
+git_user="srajasimman"
+git_repo="dotfiles"
+git_url="https://${git_host}/${git_user}/"
+
+# Variables for temporary files/directories.
+temp_file="$(mktemp -u)"
+temp_dir="$(mktemp -d)"
+
+
+## Colorize output.
+# shellcheck disable=SC2034
+red="\033[91m"
+# shellcheck disable=SC2034
+green="\033[92m"
+# shellcheck disable=SC2034
+blue="\033[94m"
+# shellcheck disable=SC2034
+yellow="\033[93m"
+# shellcheck disable=SC2034
+white="\033[97m"
+# shellcheck disable=SC2034
+no_color="\033[0m"
+
+# Array for package dependencies.
+pkg_list=("curl"
+          "git"
+          "tree"
+          "unzip"
+          "vim"
+          "zsh")
+
+# Array for Brew packages.
+brew_list=("atuin"
+           "fzf"
+           "gh"
+           "bat"
+           "bat-extras"
+           "duf"
+           "eza"
+           "fd"
+           "ripgrep"
+           "zoxide")
+
+print_msg() {
+    echo -e "${green}=>${no_color}${white}" "${@}" "${no_color}" >&1
+}
+
+print_error() {
+    echo -e "${red}=> ERROR:${no_color}${white}" "${@}" "${no_color}" >&2
+}
+
+print_header() {
+    echo -e "${blue}
+       _     _   ___ _ _
+     _| |___| |_|  _|_| |___ ___
+   _| . | . |  _|  _| | | -_|_ -|
+  |_|___|___|_| |_| |_|_|___|___|${yellow}
+  BOOTSTRAP SCRiPT${white}
+
+  ${git_url}${git_repo}${no_color}
+" >&1
+}
+
+install_homebrew() {
+    print_msg "Installing Homebrew..."
+    # Install Homebrew according to https://docs.brew.sh/Homebrew-on-Linux
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    [ -d /home/linuxbrew/.linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    [ -d /opt/homebrew/ ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+    # Recommended steps bewlo...
+    brew doctor
+    brew services
+    brew install gcc
+}
+
+brew_install() {
+    print_msg "Installing brew packages..."
+    brew install "${brew_list[@]}"
+}
+
+bootstrap_zsh() {
+    print_msg "Bootstrapping Zsh..."
+    # Array for Zsh configuration directory/files.
+    zsh_dotfiles=(".zsh" ".zlogin" ".zlogout" ".zprofile" ".zshenv" ".zshrc")
+    # Delete default Zsh configuration files if present.
+    for file in "${zsh_dotfiles[@]}"; do
+        [ -e "${HOME}/${file}" ] && rm -rf "${HOME:?}/${file}" >/dev/null 2>&1
+    done
+    print_msg "Set Zsh as default shell..."
+    # Set default shell to Zsh.
+    chsh -s "$(command -v zsh)"
+    print_msg "Adding system-wide Zsh configuration options..."
+    # Set path to Zsh configuration files (system-wide configuration). We want
+    # to do this to avoid as many dotfiles as possible in user home directory.
+    # shellcheck disable=SC2016
+}
+
+bootstrap_ohmyzsh() {
+    if [ ! -d ${HOME}/.oh-my-zsh ]; then
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && exit)"
+    fi
+    
+    [ ! -d ${HOME}/.oh-my-zsh/custom/plugins/fast-syntax-highlighting ] && git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+    [ ! -d ${HOME}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    [ ! -d ${HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+}
+
+print_header
+install_homebrew
+brew_install
+bootstrap_zsh
+bootstrap_ohmyzsh
