@@ -1,3 +1,4 @@
 .ssh/*
 .local/share/atuin/key
 .env_secrets
+.aws/credentials
