@@ -85,6 +85,7 @@ plugins=(
   azure
   gcloud
   brew
+  hubctl
   docker
   extract
   eza
@@ -131,8 +132,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(atuin init zsh)"
+eval "$(fnm env --use-on-cd --shell zsh)"
+eval "$(gh copilot alias -- zsh)"
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/srajasimman/.docker/completions $fpath)
@@ -140,5 +142,6 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-eval "$(atuin init zsh)"
-eval "$(fnm env --use-on-cd --shell zsh)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+

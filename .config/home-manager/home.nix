@@ -35,6 +35,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     act
+    amazon-q-cli
     aria2
     assh
     atuin
@@ -42,6 +43,8 @@
     awscli
     azure-cli
     bat
+    bun
+    devbox
     diff-so-fancy
     direnv
     duf
@@ -50,12 +53,14 @@
     fnm
     fx
     fzf
+    ffmpeg
     gemini-cli
     gh
     git
     git-extras
     gnupg
     go
+    graphviz
     kubernetes-helm
     httpie
     ipcalc
@@ -67,9 +72,10 @@
     lazydocker
     lazygit
     lego
+    mkcert
     neovim
     nmap
-    ollama
+    opencode
     pv
     pyenv
     rclone

@@ -1,10 +1,19 @@
 [core]
 	excludesfile = /Users/srajasimman/.gitignore
 	excludesfile = ${HOME}/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = nvim
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
 
 [user]
 	name = Rajasimman S
 	email = srajasimman@gmail.com
+	signingkey = C59753B48268E920
+
+[commit]
+	gpgsign = true
 
 [color]
 	ui = auto
@@ -24,8 +33,8 @@
 
 [credential "https://github.com"]
 	helper = 
-	helper = !${HOMEBREW_PREFIX}/bin/gh auth git-credential
+	helper = !/Users/srajasimman/.nix-profile/bin/gh auth git-credential
 
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !${$HOMEBREW_PREFIX}/bin/gh auth git-credential
+	helper = !/Users/srajasimman/.nix-profile/bin/gh auth git-credential

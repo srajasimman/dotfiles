@@ -1,3 +1,5 @@
+.PHONY: switch clean
+
 switch:
 	home-manager switch --flake .#srajasimman
 
@@ -7,4 +9,3 @@ update:
 clean:
 	nix-collect-garbage -d
 
-.PHONY: switch clean
