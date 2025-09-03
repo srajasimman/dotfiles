@@ -1,0 +1,6 @@
+[user]
+	name = Rajasimman S
+	email = Rajasimman.Shanmugam@rehlko.com
+
+[url "git@bitbucket.org:"]
+        insteadOf = https://bitbucket.org/

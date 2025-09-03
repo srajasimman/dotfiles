@@ -1,6 +1,9 @@
 command=/Users/srajasimman/.nix-profile/bin/tmux
 theme = Dracula
-maximize = true
 font-size = 14
-font-family = "JetBrainsMono Nerd Font Mono"
+font-family = JetBrainsMono Nerd Font Mono
+maximize = true
 background-opacity = 0.95
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig

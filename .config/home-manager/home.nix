@@ -39,8 +39,9 @@
     aria2
     assh
     atuin
+    awscli2
     aws-iam-authenticator
-    awscli
+    aws-sam-cli
     azure-cli
     bat
     bun
@@ -74,8 +75,10 @@
     lego
     mkcert
     neovim
+    ntfs3g
     nmap
     opencode
+    pnpm
     pv
     pyenv
     rclone

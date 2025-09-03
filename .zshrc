@@ -81,6 +81,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  direnv
   aws
   azure
   gcloud
@@ -98,6 +99,8 @@ plugins=(
   zsh-syntax-highlighting
   fast-syntax-highlighting
   fzf-tab
+  my-zshrc
+  pnpm-shell-completion
 # zsh-autocomplete
 )
 

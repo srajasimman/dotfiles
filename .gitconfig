@@ -38,3 +38,6 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/Users/srajasimman/.nix-profile/bin/gh auth git-credential
+
+[includeIf "gitdir:/Users/srajasimman/Projects/rehlko"]
+        path = ~/.gitconfig-rehlko
