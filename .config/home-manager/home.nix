@@ -41,6 +41,7 @@
     atuin
     awscli2
     aws-iam-authenticator
+    amazon-ecr-credential-helper
     aws-sam-cli
     azure-cli
     bat
@@ -48,6 +49,7 @@
     devbox
     diff-so-fancy
     direnv
+    dprint
     duf
     eza
     fd
@@ -73,8 +75,10 @@
     lazydocker
     lazygit
     lego
+    lnav
     mkcert
     neovim
+    ni
     ntfs3g
     nmap
     opencode
@@ -87,7 +91,6 @@
     scrcpy
     socat
     tenv
-    terraform-docs
     tig
     tmate
     tmux
@@ -95,6 +98,7 @@
     uv
     xh
     yadm
+    yarn
     yt-dlp
     zoxide
 
