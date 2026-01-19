@@ -42,8 +42,8 @@
     awscli2
     aws-iam-authenticator
     amazon-ecr-credential-helper
-    aws-sam-cli
     azure-cli
+    azure-storage-azcopy
     bat
     bun
     devbox
@@ -87,10 +87,10 @@
     pyenv
     rclone
     ripgrep
-    ruby_3_2
     scrcpy
     socat
     tenv
+    terraform-ls
     tig
     tmate
     tmux
