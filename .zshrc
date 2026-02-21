@@ -93,7 +93,7 @@ plugins=(
   fzf
   gh
   nmap
-  nvm
+  fnm
   zoxide
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -102,6 +102,10 @@ plugins=(
   my-zshrc
   pnpm-shell-completion
 # zsh-autocomplete
+  qrcode
+  tailscale
+  kubectl
+  opencode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -135,6 +139,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias tg-send="uvx telegram-send"
+
 eval "$(atuin init zsh)"
 eval "$(fnm env --use-on-cd --shell zsh)"
 
@@ -152,5 +158,8 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+export EDITOR="nvim"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+

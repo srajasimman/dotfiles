@@ -1,6 +1,9 @@
 [user]
-	name = Rajasimman S
+	name = Rajasimman Shanmugam
 	email = Rajasimman.Shanmugam@rehlko.com
 
 [url "git@bitbucket.org:"]
         insteadOf = https://bitbucket.org/
+
+[commit]
+        gpgsign = false

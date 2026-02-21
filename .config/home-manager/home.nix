@@ -46,6 +46,7 @@
     azure-storage-azcopy
     bat
     bun
+    claude-code
     devbox
     diff-so-fancy
     direnv
@@ -59,6 +60,7 @@
     ffmpeg
     gemini-cli
     gh
+    github-copilot-cli
     git
     git-extras
     gnupg
@@ -91,6 +93,7 @@
     socat
     tenv
     terraform-ls
+    terraform-docs
     tig
     tmate
     tmux
@@ -145,4 +148,8 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  
+
+  # nix config
+  nixpkgs.config.allowUnfree = true;
 }
