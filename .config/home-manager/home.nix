@@ -48,6 +48,7 @@
     bun
     claude-code
     devbox
+    diffnav
     diff-so-fancy
     direnv
     dprint
@@ -60,6 +61,7 @@
     ffmpeg
     gemini-cli
     gh
+    glab
     github-copilot-cli
     git
     git-extras
@@ -80,6 +82,7 @@
     lnav
     mkcert
     neovim
+    ngrok
     ni
     ntfs3g
     nmap
@@ -102,6 +105,7 @@
     xh
     yadm
     yarn
+    yq
     yt-dlp
     zoxide
 

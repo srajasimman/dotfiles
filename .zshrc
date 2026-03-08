@@ -87,7 +87,6 @@ plugins=(
   gcloud
   brew
   hubctl
-  docker
   extract
   eza
   fzf
