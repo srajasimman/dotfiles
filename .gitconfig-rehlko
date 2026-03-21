@@ -2,8 +2,33 @@
 	name = Rajasimman Shanmugam
 	email = Rajasimman.Shanmugam@rehlko.com
 
+[commit]
+        gpgsign = false
+
 [url "git@bitbucket.org:"]
         insteadOf = https://bitbucket.org/
 
-[commit]
-        gpgsign = false
+[url "git@ssh.dev.azure.com:v3/rk-digital/"]
+        insteadOf = https://dev.azure.com/rk-digital/
+
+[url "git@ssh.dev.azure.com:v3/rk-gencontrols/"]
+        insteadOf = https://dev.azure.com/rk-gencontrols/
+
+[url "git@ssh.dev.azure.com:v3/rk-hems/"]
+        insteadOf = https://dev.azure.com/rk-hems/
+
+[url "git@ssh.dev.azure.com:v3/rk-insights-analytics/"]
+        insteadOf = https://dev.azure.com/rk-insights-analytics/
+
+[url "git@ssh.dev.azure.com:v3/rk-iot/"]
+        insteadOf = https://dev.azure.com/rk-iot/
+
+[url "git@ssh.dev.azure.com:v3/rk-mulesoft/"]
+        insteadOf = https://dev.azure.com/rk-mulesoft/
+
+[url "git@ssh.dev.azure.com:v3/rk-oncue-remote-monitoring/"]
+        insteadOf = https://dev.azure.com/rk-oncue-remote-monitoring/
+
+[url "git@ssh.dev.azure.com:v3/rk-sitetech/"]
+        insteadOf = https://dev.azure.com/rk-sitetech/
+

@@ -1,33 +1,111 @@
-
 # tap repositories and their packages
-
-tap 'homebrew/core'
-tap 'homebrew/cask'
-cask 'android-platform-tools'
-cask 'betterdisplay'
-cask 'brave-browser'
-cask 'claude'
-cask 'deskpad'
-cask 'ghostty'
-cask 'google-cloud-sdk'
-cask 'kap'
-cask 'notion'
-cask 'openvpn-connect'
-cask 'raycast'
-cask 'stats'
-cask 'tailscale'
-cask 'visual-studio-code'
-cask 'vlc'
-cask 'zed'
-
+tap 'oven-sh/bun'
 tap 'rcmdnk/file'
-brew 'brew-file'
+
+brew 'brew-file'  # Brewfile manager for Homebrew
+brew 'mas'  # Mac App Store command-line interface
+
+# CLI Tools from Nix migration
+brew 'act'  # Run your GitHub Actions locally
+brew 'aria2'  # Download with resuming and segmented downloading
+brew 'assh'  # Advanced SSH config - Regex, aliases, gateways, includes and dynamic hosts
+brew 'atuin'  # Improved shell history for zsh, bash, fish and nushell
+brew 'awscli'  # Official Amazon AWS command-line interface
+brew 'aws-iam-authenticator'  # Use AWS IAM credentials to authenticate to Kubernetes
+brew 'azcopy'  # Azure Storage data transfer utility
+brew 'azure-cli'  # Microsoft Azure CLI 2.0
+brew 'bat'  # Clone of cat(1) with syntax highlighting and Git integration
+brew 'oven-sh/bun/bun'  # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one
+brew 'diff-so-fancy'  # Good-lookin' diffs with diff-highlight and more
+brew 'diffnav'  # Git diff pager based on delta but with a file tree
+brew 'direnv'  # Load/unload environment variables based on $PWD
+brew 'docker-credential-helper-ecr'  # Docker Credential Helper for Amazon ECR
+brew 'dprint'  # Pluggable and configurable code formatting platform written in Rust
+brew 'duf'  # Disk Usage/Free Utility - a better 'df' alternative
+brew 'eza'  # Modern, maintained replacement for ls
+brew 'fd'  # Simple, fast and user-friendly alternative to find
+brew 'ffmpeg'  # Play, record, convert, and stream select audio and video codecs
+brew 'fnm'  # Fast and simple Node.js version manager
+brew 'fx'  # Terminal JSON viewer
+brew 'fzf'  # Command-line fuzzy finder written in Go
+brew 'gemini-cli'  # Interact with Google Gemini AI models from the command-line
+brew 'gh'  # GitHub command-line tool
+brew 'git'  # Distributed revision control system
+brew 'git-extras'  # Small git utilities
+brew 'glab'  # Open-source GitLab command-line tool
+brew 'gnupg'  # GNU Privacy Guard (OpenPGP)
+brew 'go'  # Open source programming language to build simple/reliable/efficient software
+brew 'graphviz'  # Graph visualization software from AT&T and Bell Labs
+brew 'helm'  # Kubernetes package manager
+brew 'httpie'  # User-friendly cURL replacement (command-line HTTP client)
+brew 'ipcalc'  # Calculate various network masks, etc. from a given IP address
+brew 'jq'  # Lightweight and flexible command-line JSON processor
+brew 'k9s'  # Kubernetes CLI To Manage Your Clusters In Style!
+brew 'kompose'  # Tool to move from `docker-compose` to Kubernetes
+brew 'kubernetes-cli'  # Kubernetes command-line interface
+brew 'kustomize'  # Template-free customization of Kubernetes YAML manifests
+brew 'lazydocker'  # Lazier way to manage everything docker
+brew 'lazygit'  # Simple terminal UI for git commands
+brew 'lego'  # Let's Encrypt client and ACME library
+brew 'lnav'  # Curses-based tool for viewing and analyzing log files
+brew 'mkcert'  # Simple tool to make locally trusted development certificates
+brew 'neovim'  # Ambitious Vim-fork focused on extensibility and agility
+brew 'ni'  # Selects the right Node package manager based on lockfiles
+brew 'nmap'  # Port scanning utility for large networks
+brew 'opencode'  # AI coding agent, built for the terminal
+brew 'pnpm'  # Fast, disk space efficient package manager
+brew 'pv'  # Monitor data's progress through a pipe
+brew 'pyenv'  # Python version management
+brew 'rclone'  # Rsync for cloud storage
+brew 'ripgrep'  # Search tool like grep and The Silver Searcher
+brew 'scrcpy'  # Display and control your Android device
+brew 'socat'  # SOcket CAT: netcat on steroids
+brew 'tenv'  # OpenTofu / Terraform / Terragrunt / Terramate / Atmos version manager
+brew 'terraform-docs'  # Tool to generate documentation from Terraform modules
+brew 'terraform-ls'  # Terraform Language Server
+brew 'tig'  # Text interface for Git repositories
+brew 'tmate'  # Instant terminal sharing
+brew 'tmux'  # Terminal multiplexer
+brew 'tree'  # Display directories as trees (with optional color/HTML output)
+brew 'uv'  # Extremely fast Python package installer and resolver, written in Rust
+brew 'xh'  # Friendly and fast tool for sending HTTP requests
+brew 'yadm'  # Yet Another Dotfiles Manager
+brew 'yarn'  # JavaScript package manager
+brew 'yq'  # Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew 'yt-dlp'  # Feature-rich command-line audio/video downloader
+brew 'zoxide'  # Shell extension to navigate your filesystem faster
+
+# GUI Applications (Casks)
+cask 'android-platform-tools'  # Android SDK component
+cask 'betterdisplay'  # Display management tool
+cask 'brave-browser'  # Web browser focusing on privacy
+cask 'claude'  # Anthropic's official Claude AI desktop app
+cask 'claude-code'  # Terminal-based AI coding assistant
+cask 'deskpad'  # Virtual monitor for screen sharing
+cask 'ghostty'  # Terminal emulator that uses platform-native UI and GPU acceleration
+cask 'google-cloud-sdk'  # Set of tools to manage resources and applications hosted on Google Cloud
+cask 'kap'  # Open-source screen recorder built with web technology
+cask 'ngrok'  # Reverse proxy, secure introspectable tunnels to localhost
+cask 'notion'  # App to write, plan, collaborate, and get organised
+cask 'openvpn-connect'  # Client program for the OpenVPN Access Server
+cask 'raycast'  # Control your tools with a few keystrokes
+cask 'stats'  # System monitor for the menu bar
+cask 'tailscale-app'  # Easiest, most secure way to use WireGuard and 2FA
+cask 'visual-studio-code'  # Open-source code editor
+cask 'vlc'  # Multimedia player
+cask 'zed'  # Multiplayer code editor
+
+# Nerd Fonts
+cask 'font-fira-code-nerd-font'  # FiraCode Nerd Font (Fira Code)
+cask 'font-hack-nerd-font'  # Hack Nerd Font (Hack)
+cask 'font-jetbrains-mono-nerd-font'  # JetBrainsMono Nerd Font families (JetBrains Mono)
+cask 'font-meslo-lg-nerd-font'  # MesloLG Nerd Font families (Meslo LG)
 
 # App Store applications
-mas 'GarageBand (10.4.12)', id: 682658836
-mas 'iMovie (10.4.3)', id: 408981434
-mas 'Keynote (14.4)', id: 409183694
-mas 'Numbers (14.4)', id: 409203825
-mas 'Pages (14.4)', id: 409201541
+# mas 'GarageBand (10.4.12)', id: 682658836
+# mas 'iMovie (10.4.3)', id: 408981434
+# mas 'Keynote (14.4)', id: 409183694
+# mas 'Numbers (14.4)', id: 409203825
+# mas 'Pages (14.4)', id: 409201541
 mas 'WhatsApp (25.17.82)', id: 310633997
-mas 'Perplexity (2.250710.0)', id: 6714467650
+# mas 'Perplexity (2.250710.0)', id: 6714467650

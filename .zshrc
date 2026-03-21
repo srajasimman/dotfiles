@@ -100,11 +100,11 @@ plugins=(
   fzf-tab
   my-zshrc
   pnpm-shell-completion
-# zsh-autocomplete
   qrcode
   tailscale
   kubectl
   opencode
+# zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -137,8 +137,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias tg-send="uvx telegram-send"
 
 eval "$(atuin init zsh)"
 eval "$(fnm env --use-on-cd --shell zsh)"

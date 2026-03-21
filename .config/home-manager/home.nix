@@ -113,6 +113,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.meslo-lg
     nerd-fonts.hack
+
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
